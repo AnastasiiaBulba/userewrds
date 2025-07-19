@@ -1,0 +1,650 @@
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  background: linear-gradient(
+    135deg,
+    var(--background-dark) 0%,
+    var(--primary-color) 100%
+  );
+  padding: var(--spacing-xxl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../painting/hero.jpg") center/cover no-repeat;
+  opacity: 0.3;
+  z-index: 1;
+  animation: heroPulse 4s ease-in-out infinite;
+}
+
+@keyframes heroPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 var(--spacing-lg);
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-white);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(
+    45deg,
+    var(--accent-color),
+    var(--accent-secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.8;
+}
+
+/* Game Features Section */
+.game-features {
+  padding: var(--spacing-xxl) 0;
+  background: linear-gradient(
+    135deg,
+    var(--background-light) 0%,
+    var(--primary-color) 100%
+  );
+  position: relative;
+}
+
+.game-features::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../painting/section3.jpg") center/cover no-repeat;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.game-features .container {
+  position: relative;
+  z-index: 2;
+}
+
+.game-features h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+  font-size: 3rem;
+  color: var(--accent-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  justify-content: center;
+}
+
+.feature-card {
+  background: linear-gradient(
+    135deg,
+    var(--background-dark),
+    var(--primary-color)
+  );
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+  text-align: center;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.feature-card:hover::before {
+  left: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-dark);
+  border-color: var(--accent-color);
+}
+
+.feature-icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card h3 {
+  color: var(--accent-secondary);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card p {
+  color: var(--text-white);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* How to Play Section */
+.how-to-play {
+  padding: var(--spacing-xxl) 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--background-dark) 100%
+  );
+  position: relative;
+}
+
+.how-to-play::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../painting/section1.jpg") center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.how-to-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xxl);
+  position: relative;
+  z-index: 2;
+}
+
+.how-to-text {
+  flex: 1;
+}
+
+.how-to-text h2 {
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  color: var(--accent-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.instruction-item {
+  background: linear-gradient(
+    135deg,
+    var(--background-dark),
+    var(--primary-color)
+  );
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+  transition: var(--transition);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.instruction-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-color);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.instruction-item:hover::before {
+  transform: scaleY(1);
+}
+
+.instruction-item:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-dark);
+  border-color: var(--accent-color);
+}
+
+.instruction-item h3 {
+  color: var(--accent-secondary);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.instruction-item p {
+  color: var(--text-white);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.how-to-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.how-to-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-dark);
+  border: 3px solid var(--accent-color);
+  transition: var(--transition);
+}
+
+.how-to-image img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: var(--shadow-dark), 0 0 30px var(--accent-color);
+}
+
+/* Game Section */
+.game-section {
+  padding: var(--spacing-xxl) 0;
+  background: linear-gradient(
+    135deg,
+    var(--background-dark) 0%,
+    var(--primary-color) 100%
+  );
+  position: relative;
+}
+
+.game-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../painting/section2.jpg") center/cover no-repeat;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.game-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.game-section h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+  color: var(--accent-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    var(--background-dark),
+    var(--primary-color)
+  );
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-dark);
+  border: 3px solid var(--accent-color);
+}
+
+.game-container iframe {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-medium);
+  border: 2px solid var(--accent-secondary);
+  max-width: 100%;
+  height: auto;
+  min-height: 600px;
+}
+
+/* Minigames Collection Section */
+.minigames-collection {
+  padding: var(--spacing-xxl) 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--background-dark) 100%
+  );
+  position: relative;
+}
+
+.minigames-collection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../painting/section2.jpg") center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.minigames-collection .container {
+  position: relative;
+  z-index: 2;
+}
+
+.minigames-collection h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+  color: var(--accent-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.collection-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xxl);
+}
+
+.collection-text {
+  flex: 1;
+}
+
+.collection-text p {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-white);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  line-height: 1.8;
+}
+
+.collection-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.collection-text li {
+  background: linear-gradient(
+    135deg,
+    var(--background-dark),
+    var(--primary-color)
+  );
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+  transition: var(--transition);
+  margin-bottom: var(--spacing-md);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.collection-text li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-secondary);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.collection-text li:hover::before {
+  transform: scaleY(1);
+}
+
+.collection-text li:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow-dark);
+  border-color: var(--accent-secondary);
+}
+
+.collection-text li:last-child {
+  margin-bottom: 0;
+}
+
+.collection-text strong {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.collection-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.collection-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-dark);
+  border: 3px solid var(--accent-secondary);
+  transition: var(--transition);
+}
+
+.collection-image img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: var(--shadow-dark), 0 0 30px var(--accent-secondary);
+}
+
+/* Reviews Section */
+.reviews {
+  padding: var(--spacing-xxl) 0;
+  background: linear-gradient(
+    135deg,
+    var(--background-dark) 0%,
+    var(--primary-color) 100%
+  );
+  position: relative;
+}
+
+.reviews::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../painting/section3.jpg") center/cover no-repeat;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.reviews .container {
+  position: relative;
+  z-index: 2;
+}
+
+.reviews h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+  color: var(--accent-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  justify-content: center;
+}
+
+.review-card {
+  background: linear-gradient(
+    135deg,
+    var(--background-dark),
+    var(--primary-color)
+  );
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+  transition: var(--transition);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  animation: cardFloat 3s ease-in-out infinite;
+}
+
+.review-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.review-card:hover::before {
+  left: 100%;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-dark);
+  border-color: var(--accent-color);
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.review-author {
+  font-weight: bold;
+  color: var(--accent-secondary);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.review-text {
+  color: var(--text-white);
+  font-style: italic;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-lg);
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .how-to-content {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .collection-content {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .feature-card {
+    max-width: none;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .review-card {
+    max-width: none;
+  }
+
+  .game-container iframe {
+    height: 500px;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .game-container iframe {
+    height: 400px;
+    min-height: 300px;
+  }
+
+  .feature-card,
+  .review-card {
+    padding: var(--spacing-lg);
+  }
+}

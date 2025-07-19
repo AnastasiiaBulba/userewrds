@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>userewrds.com – TickTock Challenge</title>
+    <meta
+      name="description"
+      content="Looking for the craziest brain teaser ever? Welcome to TickTock Challenge! This is a superb collection of minigames! From fun bubble shooter action to relaxing 2048 puzzles, from clever match and merge challenges to salon-themed brain teasers. This game has it all! Every level brings a new surprise, pushing you to think faster and smarter under the pressure of the ticking clock! Each round is quick, crazy, and incredibly fun."
+    />
+    <meta
+      name="keywords"
+      content="Brain, Bubble Shooter, Relaxation, Shoot, Puzzle, Challenge, Minigames, Brain Teasers"
+    />
+    <link rel="icon" type="image/x-icon" href="./painting/icon.jpg" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>TickTock Challenge</h1>
+          <p>
+            Experience the craziest brain teaser ever! A superb collection of
+            minigames that will push your mind to the limit. From bubble shooter
+            action to relaxing 2048 puzzles, from clever match and merge
+            challenges to salon-themed brain teasers - this game has it all!
+          </p>
+          <button class="cta-button" onclick="scrollToGame()">Play Now</button>
+        </div>
+      </section>
+
+      <!-- New Game Features Section -->
+      <section class="game-features">
+        <div class="container">
+          <h2>Challenge Your Brain</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🧠</div>
+              <h3>Brain Teasers</h3>
+              <p>
+                Test your cognitive skills with challenging puzzles that require
+                quick thinking and strategic planning.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⏰</div>
+              <h3>Time Pressure</h3>
+              <p>
+                Race against the clock! Every level brings new surprises,
+                pushing you to think faster and smarter.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3>Bubble Shooter</h3>
+              <p>
+                Enjoy classic bubble shooter action with modern twists and
+                challenging mechanics.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🧩</div>
+              <h3>2048 Puzzles</h3>
+              <p>
+                Relax with addictive 2048 puzzles that will keep you engaged for
+                hours.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How to Play Section -->
+      <section class="how-to-play">
+        <div class="container">
+          <div class="how-to-content">
+            <div class="how-to-text">
+              <h2>How to Play</h2>
+              <div class="instructions">
+                <div class="instruction-item">
+                  <h3>🎮 Controls</h3>
+                  <p>
+                    Use mouse clicks and keyboard controls to solve puzzles.
+                    Each minigame has its own unique controls and mechanics.
+                  </p>
+                </div>
+                <div class="instruction-item">
+                  <h3>🎯 Objectives</h3>
+                  <p>
+                    Complete each challenge before time runs out. The faster you
+                    solve puzzles, the higher your score!
+                  </p>
+                </div>
+                <div class="instruction-item">
+                  <h3>🏆 Tips</h3>
+                  <p>
+                    Think strategically and plan your moves ahead. Some puzzles
+                    require creative thinking and pattern recognition.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="how-to-image">
+              <img
+                src="./painting/section1.jpg"
+                alt="How to play TickTock Challenge"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Game Section -->
+      <section class="game-section">
+        <div class="container">
+          <h2>Play TickTock Challenge</h2>
+          <div class="game-container">
+            <iframe
+              src="https://html5.gamemonetize.co/9tjztpxmnpc4mt08k34qxao8bxpq6o1f/"
+              width="100%"
+              height="1280"
+              scrolling="none"
+              frameborder="0"
+              allowfullscreen
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Minigames Collection Section -->
+      <section class="minigames-collection">
+        <div class="container">
+          <div class="collection-content">
+            <div class="collection-text">
+              <h2>Diverse Minigames Collection</h2>
+              <p>
+                Explore various themed challenges that will test different
+                aspects of your brain power. Each minigame offers unique
+                gameplay:
+              </p>
+              <ul>
+                <li>
+                  <strong>Bubble Shooter:</strong> Classic arcade action with
+                  modern twists
+                </li>
+                <li>
+                  <strong>2048 Puzzles:</strong> Relaxing number-based brain
+                  teasers
+                </li>
+                <li>
+                  <strong>Match & Merge:</strong> Strategic combination
+                  challenges
+                </li>
+                <li>
+                  <strong>Salon Brain Teasers:</strong> Creative problem-solving
+                  scenarios
+                </li>
+              </ul>
+            </div>
+            <div class="collection-image">
+              <img
+                src="./painting/section2.jpg"
+                alt="Diverse minigames collection"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section class="reviews">
+        <div class="container">
+          <h2>Player Reviews</h2>
+          <div class="reviews-grid" id="reviews-container">
+            <!-- Reviews will be loaded from JSON -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+      <div class="cookie-content">
+        <p>
+          We use cookies to enhance your gaming experience. By continuing to use
+          this site, you agree to our use of cookies.
+        </p>
+        <button id="accept-cookies" class="cookie-button">Accept</button>
+      </div>
+    </div>
+
+    <script src="./js/builder.js"></script>
+    <script src="./js/cookie-banner.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
