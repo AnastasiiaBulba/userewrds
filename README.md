@@ -25,7 +25,7 @@ TickTock Challenge is a superb collection of minigames that will push your mind 
 
 - **Email**: connection@userewrds.com
 - **Phone**: +1 (876) 101-5432
-- **Address**: 373 Maple Street, Thunder Bay, ON P7A 1T2, Canada
+- **Address**: 218 Maple Avenue, Thunder Bay, ON, Canada
 
 ## Technical Details
 
